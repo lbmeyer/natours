@@ -17,6 +17,22 @@
   </head>
 
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+      <div class="navigation__background">&nbsp;</div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#" class="navigation__link">About Natour</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link">Your Benefits</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link">Popular Tours</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link">Stories</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link">Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="Logo" class="header__logo" />
@@ -26,7 +42,7 @@
           <span class="heading-primary--main">Outdoors</span>
           <span class="heading-primary--sub">is where life happens</span>
         </h1>
-        <a href="#" class="btn btn--white btn--animated">Discover our Tours</a>
+        <a href="#section-tours" class="btn btn--white btn--animated">Discover our Tours</a>
       </div>
     </header>
 
@@ -140,7 +156,7 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">Most Popular Tours</h2>
         </div>
@@ -171,7 +187,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -202,7 +218,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -233,7 +249,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$297</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book now!</a>
+                  <a href="#popup" class="btn btn--white">Book now!</a>
                 </div>
               </div>
             </div>
@@ -249,7 +265,7 @@
 			
 			<section class="section-stories">
         <div class="bg-video">
-          <video class="bg-video__content" autoplay muted loop>
+          <video class="bg-video__content"  muted loop>
             <source src="img/video.mp4" type="video/mp4">
             <source src="img/video.webm" type="video/webm">
               Your Browser is not supported!
@@ -295,10 +311,98 @@
         <div class="u-center-text u-margin-top-huge">
 					<a href="#" class="btn-text">Read all stories &rarr;</a>
 				</div>
-			</section>
+      </section>
+      
+      <section class="section-book">
+        <div class="row">
+          <div class="book">
+            <div class="book__form">
+              <form action="#" class="form">
+                <div class="u-margin-bottom-medium">
+                  <h2 class="heading-secondary">Start Booking Now</h2>
+                </div>
+                <div class="form__group">
+                  <input type="text" id="name" class="form__input" placeholder="Full Name" required>
+                  <label for="name" class="form__label">Full Name</label>
+                </div>
+                <div class="form__group">
+                  <input type="email" id="email" class="form__input" placeholder="Email Address" required>
+                  <label for="email" class="form__label">Email Address</label>
+                </div>
 
+                <div class="form__group u-margin-bottom-medium">
+                  <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="small" name="size">
+                    <label for="small" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Small tour group
+                    </label>
+                  </div>
+                  <div class="form__radio-group">
+                    <input type="radio" class="form__radio-input" id="large" name="size">
+                    <label for="large" class="form__radio-label">
+                      <span class="form__radio-button"></span>
+                      Large tour group
+                    </label>
+                  </div>
+                </div>
 
+                <div class="form__group">
+                  <button class="btn btn--green">Next step &rarr;</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer__logo-box">
+        <img src="img/logo-green-2x.png" alt="Full logo" class="footer__logo">
+      </div>
+      <div class="row">
+        <div class="col-1-of-2">
+          <div class="footer__navigation">
+            <ul class="footer__list">
+              <li class="footer__item"><a href="#" class="footer__link">Company</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Contact</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Carriers</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Privacy policy</a></li>
+              <li class="footer__item"><a href="#" class="footer__link">Terms</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="col-1-of-2">
+          <p class="footer__copyright">
+            Built by <a href="#" class="footer__link">Louis Wong</a> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Delectus sunt reiciendis quisquam error aut quis asperiores fugiat necessitatibus? Illo impedit incidunt dolores ad beatae libero esse autem delectus expedita asperiores?
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <div class="popup__images">
+            <img src="img/nat-8.jpg" alt="Tour Photo" class="popup__img">
+            <img src="img/nat-9.jpg" alt="Tour Photo" class="popup__img">
+          </div>
+        </div>
+        <div class="popup__right">
+          <a href="#section-tours" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-bottom-small">Start booking now</h2>
+          <h3 class="heading-tertiary u-margin-bottom-small">Important &ndash; Please read these terms before booking</h3>
+          <p class="popup__text">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Et soluta voluptate, excepturi voluptatum unde odio perspiciatis suscipit quasi cum in delectus eum impedit aliquid, ad atque cupiditate officia, corporis amet. Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam accusantium vero neque esse alias illo itaque eum dolorum ab, consequuntur repellendus dicta veritatis reiciendis rem quod porro sunt a quaerat!
+
+            Laboriosam accusantium vero neque esse alias illo itaque eum dolorum ab, consequuntur repellendus dicta veritatis reiciendis rem quod porro sunt a quaerat!
+
+          </p>
+          <a href="#" class="btn btn--green">Book Now</a>
+        </div>
+      </div>
+    </div>
 
     <!--
       <section class="grid-test">
